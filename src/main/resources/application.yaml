@@ -1,0 +1,17 @@
+server:
+  port: 8080
+  servlet:
+    # Trong he thong co nhieu microservice, context nay se dinh vi duoc he thong cua ban,
+    # Khi co loadbalancer apply vao, khi routing den dung service nay cua ban
+    context-path: /identity
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/identity_service
+    username: mysql
+    password: P@ss123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
