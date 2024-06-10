@@ -43,4 +43,8 @@ public class UserService {
         user.setDob(request.getDob());
         return userRepository.save(user);
     }
+
+    public void deleteUser(String userId) {
+        userRepository.deleteById(userId);
+    }
 }
