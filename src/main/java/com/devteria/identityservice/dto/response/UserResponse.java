@@ -1,5 +1,4 @@
-package com.devteria.identityservice.entity;
-
+package com.devteria.identityservice.dto.response;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,13 +9,12 @@ import lombok.experimental.FieldDefaults;
 
 import java.time.LocalDate;
 
-@Entity
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class User {
+public class UserResponse {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
