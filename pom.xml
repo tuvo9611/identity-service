@@ -57,6 +57,9 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>
+			identity-service-0.0.1
+		</finalName>
 	</build>
 
 </project>
