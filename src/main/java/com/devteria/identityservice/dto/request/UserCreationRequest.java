@@ -13,10 +13,10 @@ import java.time.LocalDate;
 public class UserCreationRequest {
 
     @Size(min = 3, message = "USERNAME_INVALID")
-    private String username;
+    String username;
     @Size(min = 8, message = "PASSWORD_INVALID")
-    private String password;
-    private String firstName;
-    private final String  lastName;
-    private LocalDate dob;
+    String password;
+    String firstName;
+    final String lastName;
+    LocalDate dob;
 }
