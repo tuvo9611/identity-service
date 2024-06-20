@@ -49,4 +49,8 @@ public class UserController {
         userService.deleteUser(userId);
         return "User has been delete";
     }
+    @DeleteMapping
+    void deleteAllUsers(){
+        userService.deleteAllUser();
+    }
 }
