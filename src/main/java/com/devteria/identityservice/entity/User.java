@@ -1,14 +1,14 @@
 package com.devteria.identityservice.entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.devteria.identityservice.enums.Role;
+import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.time.LocalDate;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Data
@@ -26,4 +26,6 @@ public class User {
     String firstName;
     String lastName;
     LocalDate dob;
+    @ElementCollection
+    Set<String> roles;
 }
