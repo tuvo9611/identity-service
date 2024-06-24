@@ -44,6 +44,7 @@ public class AuthenticationService {
     private String SIGNER_KEY;
 
     public AuthenticationResponse authenticate(AuthenticationRequest request) {
+        log.info("Signer Key: {}", SIGNER_KEY);
         var user = userRepository.findByUsername(request.getUsername())
                 .orElseThrow(() -> new AppException(ErrorCode.USER_NOT_EXISTED));
         PasswordEncoder passwordEncoder = new BCryptPasswordEncoder(10);
